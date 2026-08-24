@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez Myrtho Charles pour un projet web, une collaboration en IA ou une opportunité professionnelle.">
+  <title>Contact | Myrtho Charles</title>
+  <script src="language-bootstrap.js"></script>
+  <link rel="icon" href="assets/images/otter-tech-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tech-mode">
+  <div class="page-noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><img src="assets/images/otter-tech-logo.png" alt="Logo en forme de loutre"><span>MYRTHO CHARLES<span class="accent">.</span></span></a>
+    <button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav class="main-navigation" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="about.html">À propos</a><a href="projects.html">Projets</a><a href="experience.html">Expérience</a><a class="active" href="contact.html">Contact</a></nav>
+    <div class="header-actions"><button class="mode-toggle" type="button" aria-label="Changer de perspective"><span class="tech-label active">TECH</span><i aria-hidden="true"></i><span class="business-label">BIZ</span></button><div class="language-control"><label for="language-selector">LANGUE</label><select id="language-selector" aria-label="Choisir la langue du site"><option value="en">EN</option><option value="fr" selected>FR</option><option value="ht">KR</option><option value="es">ES</option></select><div id="google-translate-element" aria-hidden="true"></div></div><a class="small-button" href="mailto:myrthocharles95@gmail.com">Envoyer un courriel <span>↗</span></a></div>
+  </header>
+
+  <main>
+    <section class="inner-hero contact-hero"><p class="section-number"><span>04</span> CONTACT</p><h1>Une solution intelligente<br><em>née de la collaboration.</em></h1><p>Le problème à résoudre, le public à servir et le résultat à créer définissent le point de départ.</p></section>
+
+    <figure class="location-photo">
+      <img src="assets/images/developer-old.jpg" alt="Illustration du développement web et de la programmation">
+      <figcaption>Développement web · Technologie · Création numérique</figcaption>
+    </figure>
+
+    <!-- Canaux de contact directs. -->
+    <section class="section contact-layout">
+      <div class="contact-intro"><p class="eyebrow">DÉMARRER UNE CONVERSATION</p><h2>Des canaux professionnels<br><em>pour un contact direct.</em></h2><p>Pour les projets et les occasions professionnelles, le courriel constitue le moyen le plus rapide. Le code public est disponible sur GitHub et les relations professionnelles peuvent être établies sur LinkedIn.</p></div>
+      <div class="contact-panel">
+        <div class="contact-links">
+          <a href="mailto:myrthocharles95@gmail.com"><span>COURRIEL</span><strong>myrthocharles95@gmail.com</strong><i>↗</i></a>
+          <a href="https://www.linkedin.com/in/bui-gerry-myrtho-charles-59a916179" target="_blank" rel="noreferrer"><span>LINKEDIN</span><strong>Bui Gerry Myrtho Charles</strong><i>↗</i></a>
+          <a href="https://github.com/TitoTizzy" target="_blank" rel="noreferrer"><span>GITHUB</span><strong>github.com/TitoTizzy</strong><i>↗</i></a>
+        </div>
+
+        <!-- Formulaire statique : JavaScript prépare un courriel complet. -->
+        <form class="contact-form" id="contact-form">
+          <div class="form-heading">
+            <span>MESSAGE DIRECT</span>
+            <p>Quelques informations suffisent pour préparer la conversation.</p>
+          </div>
+
+          <div class="form-row">
+            <label>
+              <span>Nom complet</span>
+              <input name="name" type="text" autocomplete="name" required placeholder="Nom et prénom">
+            </label>
+
+            <label>
+              <span>Adresse courriel</span>
+              <input name="email" type="email" autocomplete="email" required placeholder="nom@exemple.com">
+            </label>
+          </div>
+
+          <label>
+            <span>Type de projet</span>
+            <select name="projectType" required>
+              <option value="">Sélectionner une option</option>
+              <option>Conseil en intelligence artificielle</option>
+              <option>Site ou produit web</option>
+              <option>Fintech et systèmes financiers</option>
+              <option>Opérations et gestion de comptes</option>
+              <option>Autre collaboration</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" required placeholder="Contexte, objectif et résultat recherché"></textarea>
+          </label>
+
+          <div class="form-footer">
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+            <button class="form-submit" type="submit">Préparer le courriel <span>↗</span></button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Types de collaborations recherchées. -->
+    <section class="section">
+      <div class="section-heading"><p class="section-number"><span>02</span> COLLABORATION</p><div><p class="eyebrow">DOMAINES DE CONTRIBUTION</p><h2>Trois formes<br><em>de collaboration.</em></h2></div></div>
+      <div class="detail-grid">
+        <article><span>01</span><h3>Conseil en IA</h3><p>Processus de prompting, évaluation de modèles, analyses d’IA responsable ou intégration de l’IA dans un produit numérique existant.</p></article>
+        <article><span>02</span><h3>Produits web</h3><p>Sites adaptatifs, portails opérationnels, tableaux de bord, backends Supabase et expériences frontend complètes.</p></article>
+        <article><span>03</span><h3>Opérations d’affaires</h3><p>Conception de processus clients, systèmes de gestion de comptes, structures de rapports, documentation et amélioration des processus.</p></article>
+      </div>
+    </section>
+
+    <section class="availability-panel"><div><i></i><p>DISPONIBLE POUR DES OCCASIONS SÉLECTIONNÉES</p></div><h2>Basé à Port-au-Prince.<br>Myrtho Charles travaille au-delà des frontières.</h2><a class="primary-button" href="mailto:myrthocharles95@gmail.com">Envoyer un courriel <span>↗</span></a></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="index.html"><img src="assets/images/otter-tech-logo.png" alt=""><span>MYRTHO CHARLES<span class="accent">.</span></span></a><p>PORT-AU-PRINCE · HAÏTI</p><p>© <span id="current-year"></span> Bui Gerry Myrtho Charles</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

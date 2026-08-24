@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projets web publics de Myrtho Charles, accessibles en ligne.">
+  <title>Projets | Myrtho Charles</title>
+  <script src="language-bootstrap.js"></script>
+  <link rel="icon" href="assets/images/otter-tech-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="tech-mode">
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <!-- En-tête partagé avec les autres pages. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="assets/images/otter-tech-logo.png" alt="Logo en forme de loutre">
+      <span>MYRTHO CHARLES<span class="accent">.</span></span>
+    </a>
+
+    <button class="menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+    <nav class="main-navigation" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a class="active" href="projects.html">Projets</a>
+      <a href="experience.html">Expérience</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="mode-toggle" type="button" aria-label="Changer de perspective">
+        <span class="tech-label active">TECH</span>
+        <i aria-hidden="true"></i>
+        <span class="business-label">BIZ</span>
+      </button>
+      <div class="language-control"><label for="language-selector">LANGUE</label><select id="language-selector" aria-label="Choisir la langue du site"><option value="en">EN</option><option value="fr" selected>FR</option><option value="ht">KR</option><option value="es">ES</option></select><div id="google-translate-element" aria-hidden="true"></div></div>
+      <a class="small-button" href="contact.html">Prendre contact <span>↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Introduction : seuls les projets disposant d'un site public sont retenus. -->
+    <section class="inner-hero">
+      <p class="section-number"><span>02</span> PROJETS EN LIGNE</p>
+      <h1>Des produits réels.<br><em>Accessibles en ligne.</em></h1>
+      <p>
+        Cette sélection présente exclusivement des projets disposant d’un site public.
+        Chaque étude de cas donne un accès direct au produit en ligne.
+      </p>
+
+      <div class="repository-count">
+        <strong>04</strong>
+        <span>PRODUITS NUMÉRIQUES<br>EN LIGNE</span>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PROJET 1 : COMPTAGUIDE FINANCIALS
+    ====================================================== -->
+    <section class="section case-study">
+      <div class="case-study-heading">
+        <div>
+          <p class="section-number"><span>01</span> FINTECH · SAAS · IA</p>
+          <h2>ComptaGuide<br><em>Financials.</em></h2>
+        </div>
+
+        <div class="case-summary">
+          <p>
+            Un écosystème de technologie financière conçu pour simplifier les processus
+            comptables, sécuriser l’information d’affaires et soutenir l’analyse
+            documentaire grâce à l’IA générative.
+          </p>
+          <a class="primary-button" href="https://platform.comptaguide.com" target="_blank" rel="noreferrer">
+            Visiter la plateforme <span>↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mini navigateur affichant directement la page d'accueil du projet. -->
+      <div class="site-browser">
+        <div class="browser-toolbar">
+          <div class="browser-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="browser-address"><i aria-hidden="true">◇</i><span>platform.comptaguide.com</span></div>
+          <a href="https://platform.comptaguide.com" target="_blank" rel="noreferrer" aria-label="Explorer ComptaGuide"><span>EXPLORER</span> ↗</a>
+        </div>
+        <a class="browser-preview" href="https://platform.comptaguide.com" target="_blank" rel="noreferrer">
+          <img src="assets/images/projects/comptaguide-home.png" alt="Capture de la page d'accueil de ComptaGuide Financials" loading="lazy">
+        </a>
+      </div>
+
+      <div class="case-details">
+        <article><span>DÉFI</span><p>Transformer des processus financiers et des documents fragmentés en un parcours numérique cohérent.</p></article>
+        <article><span>SOLUTION</span><p>Une architecture SaaS sécurisée combinant données relationnelles, authentification, automatisation et analyse assistée par IA.</p></article>
+        <article><span>IMPACT</span><p>Une base évolutive pour les services comptables, la collaboration client et un accès plus rapide à l’information financière.</p></article>
+      </div>
+
+      <div class="case-stack">
+        <span>Vercel</span><span>Supabase</span><span>PostgreSQL</span><span>Claude API</span><span>Cloudflare WAF</span><span>RLS</span>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PROJET 3 : SITE INSTITUTIONNEL
+    ====================================================== -->
+    <section class="section case-study">
+      <div class="case-study-heading">
+        <div>
+          <p class="section-number"><span>02</span> SANTÉ · ÉDUCATION · HUMANITAIRE</p>
+          <h2>OUH<br><em>Haïti.</em></h2>
+        </div>
+
+        <div class="case-summary">
+          <p>
+            La plateforme publique de l’Organisation de l’Union Haïtienne couvre
+            la santé, l’éducation, les actions humanitaires, les actualités, les conférences,
+            les dons, les professionnels médicaux et les ressources numériques.
+          </p>
+          <div class="button-group">
+            <a class="primary-button" href="https://www.ouhhaiti.org" target="_blank" rel="noreferrer">Visiter le site <span>↗</span></a>
+            <a class="secondary-button" href="https://github.com/TitoTizzy/Website" target="_blank" rel="noreferrer">Dépôt GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aperçu interactif du site institutionnel. -->
+      <div class="site-browser">
+        <div class="browser-toolbar">
+          <div class="browser-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="browser-address"><i aria-hidden="true">◇</i><span>ouhhaiti.org</span></div>
+          <a href="https://www.ouhhaiti.org" target="_blank" rel="noreferrer" aria-label="Explorer OUH Haiti"><span>EXPLORER</span> ↗</a>
+        </div>
+        <a class="browser-preview" href="https://www.ouhhaiti.org" target="_blank" rel="noreferrer">
+          <img src="assets/images/projects/ouh-haiti-home.png" alt="Capture de la page d'accueil de l'Organisation de l'Union Haïtienne" loading="lazy">
+        </a>
+      </div>
+
+      <div class="case-details">
+        <article><span>CONTENU</span><p>Une architecture multipage détaillée organise l’information institutionnelle, les réalisations, les publications et les médias.</p></article>
+        <article><span>ENGAGEMENT</span><p>Les parcours de don, paiement, contact, conférences et ressources répondent aux différents besoins des visiteurs.</p></article>
+        <article><span>DÉCOUVERTE</span><p>Les fichiers SEO, la navigation structurée, les articles, les galeries et les pages ciblées facilitent l’accès au contenu.</p></article>
+      </div>
+
+      <div class="case-stack">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Supabase</span><span>Vercel</span><span>SEO</span>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PROJET 4 : AFADETH
+    ====================================================== -->
+    <section class="section case-study">
+      <div class="case-study-heading">
+        <div>
+          <p class="section-number"><span>03</span> ORGANISME · FEMMES · IMPACT</p>
+          <h2>Fondation<br><em>AFADETH.</em></h2>
+        </div>
+
+        <div class="case-summary">
+          <p>
+            Une plateforme publique créée pour présenter la mission, les actions,
+            les publications, la galerie et les possibilités d’engagement d’AFADETH autour de l’impact porté par les femmes.
+          </p>
+          <div class="button-group">
+            <a class="primary-button" href="https://afadeth.org" target="_blank" rel="noreferrer">Visiter le site <span>↗</span></a>
+            <a class="secondary-button" href="https://github.com/TitoTizzy/afadeth" target="_blank" rel="noreferrer">Dépôt GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-browser">
+        <div class="browser-toolbar">
+          <div class="browser-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="browser-address"><i aria-hidden="true">◇</i><span>afadeth.org</span></div>
+          <a href="https://afadeth.org" target="_blank" rel="noreferrer" aria-label="Explorer AFADETH"><span>EXPLORER</span> ↗</a>
+        </div>
+        <a class="browser-preview" href="https://afadeth.org" target="_blank" rel="noreferrer">
+          <img src="assets/images/projects/afadeth-home.png" alt="Capture de la page d'accueil d'AFADETH" loading="lazy">
+        </a>
+      </div>
+
+      <div class="case-details">
+        <article><span>MISSION</span><p>Un récit institutionnel clair présente l’organisation, sa raison d’être et son engagement envers les femmes.</p></article>
+        <article><span>CONTENU</span><p>Les actions, les publications, les articles et une galerie visuelle permettent d’informer le public.</p></article>
+        <article><span>CONNEXION</span><p>Les moyens de contact facilitent l’engagement des visiteurs et des partenaires auprès de l’organisation.</p></article>
+      </div>
+
+      <div class="case-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Supabase</span><span>Gestion de contenu</span></div>
+    </section>
+
+    <!-- =====================================================
+         PROJET 5 : EN AVANT
+    ====================================================== -->
+    <section class="section case-study">
+      <div class="case-study-heading">
+        <div>
+          <p class="section-number"><span>04</span> TECHNOLOGIE CIVIQUE · FULL STACK</p>
+          <h2>En<br><em>Avant.</em></h2>
+        </div>
+
+        <div class="case-summary">
+          <p>
+            Une plateforme civique réunissant information publique, adhésion,
+            publications, événements, dons, administration et engagement alimenté par l’IA.
+          </p>
+          <div class="button-group">
+            <a class="primary-button" href="https://enavant.org" target="_blank" rel="noreferrer">Visiter le site <span>↗</span></a>
+            <a class="secondary-button" href="https://github.com/TitoTizzy/en-avant" target="_blank" rel="noreferrer">Dépôt GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-browser">
+        <div class="browser-toolbar">
+          <div class="browser-controls" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="browser-address"><i aria-hidden="true">◇</i><span>enavant.org</span></div>
+          <a href="https://enavant.org" target="_blank" rel="noreferrer" aria-label="Explorer En Avant"><span>EXPLORER</span> ↗</a>
+        </div>
+        <a class="browser-preview" href="https://enavant.org" target="_blank" rel="noreferrer">
+          <img src="assets/images/projects/en-avant-home.png" alt="Capture de la page d'accueil d'En Avant" loading="lazy">
+        </a>
+      </div>
+
+      <div class="case-details">
+        <article><span>PLATEFORME</span><p>Adhésions, dons, publications stratégiques, événements, médias et contenus civiques coexistent dans un seul écosystème.</p></article>
+        <article><span>BACKEND</span><p>Des API sans serveur relient Supabase, Stripe, Resend, l’administration sécurisée et les processus de contenu.</p></article>
+        <article><span>IA</span><p>La génération de questions par Anthropic crée une expérience éducative plus interactive.</p></article>
+      </div>
+
+      <div class="case-stack"><span>JavaScript</span><span>Supabase</span><span>Stripe</span><span>Anthropic</span><span>Resend</span><span>Vercel Functions</span></div>
+    </section>
+
+    <section class="contact-section">
+      <p class="eyebrow">D’AUTRES PROJETS SONT EN DÉVELOPPEMENT</p>
+      <h2>La qualité d’abord.<br><em>La publication au bon moment.</em></h2>
+      <p>Les projets sans domaine public seront ajoutés uniquement après leur mise en ligne.</p>
+      <div class="button-group"><a class="primary-button" href="contact.html">Discuter d’un projet <span>↗</span></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="index.html"><img src="assets/images/otter-tech-logo.png" alt=""><span>MYRTHO CHARLES<span class="accent">.</span></span></a>
+    <p>04 PRODUITS EN LIGNE</p>
+    <p>© <span id="current-year"></span> Bui Gerry Myrtho Charles</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

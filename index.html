@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Portfolio de Myrtho Charles, spécialiste IA, développeur frontend et gestionnaire de comptes."
+  >
+
+  <title>Myrtho Charles | Spécialiste IA et développeur frontend</title>
+
+  <script src="language-bootstrap.js"></script>
+  <link rel="icon" href="assets/images/otter-tech-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="tech-mode">
+  <!-- Texture discrète placée au-dessus de l'arrière-plan. -->
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <!-- =====================================================
+       EN-TÊTE : logo, navigation et changement de mode
+  ====================================================== -->
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Retour à l'accueil">
+      <img src="assets/images/otter-tech-logo.png" alt="Logo en forme de loutre">
+      <span>MYRTHO CHARLES<span class="accent">.</span></span>
+    </a>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav class="main-navigation" aria-label="Navigation principale">
+      <a class="active" href="index.html">Accueil</a>
+      <a href="about.html">À propos</a>
+      <a href="projects.html">Projets</a>
+      <a href="experience.html">Expérience</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button
+        class="mode-toggle"
+        type="button"
+        aria-label="Basculer entre le profil technique et le profil business"
+      >
+        <span class="tech-label active">TECH</span>
+        <i aria-hidden="true"></i>
+        <span class="business-label">BIZ</span>
+      </button>
+
+      <!-- Sélecteur visible relié au service Google Traduction. -->
+      <div class="language-control">
+        <label for="language-selector">LANGUE</label>
+        <select id="language-selector" aria-label="Choisir la langue du site">
+          <option value="en">EN</option>
+          <option value="fr" selected>FR</option>
+          <option value="ht">KR</option>
+          <option value="es">ES</option>
+        </select>
+        <div id="google-translate-element" aria-hidden="true"></div>
+      </div>
+
+      <a class="small-button" href="contact.html">
+        Prendre contact
+        <span>↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- =====================================================
+         HERO : présentation principale et identité visuelle
+    ====================================================== -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="availability-badge">
+          <i aria-hidden="true"></i>
+          Disponible pour des projets en IA et technologie
+        </div>
+
+        <p class="eyebrow">
+          SPÉCIALISTE IA
+          <span>/</span>
+          DÉVELOPPEUR FRONTEND
+          <span>/</span>
+          GESTIONNAIRE DE COMPTES
+        </p>
+
+        <h1>
+          Bui Gerry
+          <br>
+          <span>Myrtho Charles</span>
+        </h1>
+
+        <h2 class="tech-content">
+          Création de produits web intelligents à la rencontre de
+          <em>l’IA et des affaires.</em>
+        </h2>
+
+        <h2 class="business-content">
+          Transformation d’opérations complexes en résultats commerciaux
+          <em>clairs et évolutifs.</em>
+        </h2>
+
+        <p class="hero-description">
+          Spécialiste IA, développeur frontend et CEO de ComptaGuide Financials.
+          L’IA générative, Supabase et des outils frontend modernes servent à concevoir,
+          construire et déployer des écosystèmes numériques complets.
+        </p>
+
+        <div class="button-group">
+          <a class="primary-button" href="projects.html">
+            Voir les projets
+            <span>↓</span>
+          </a>
+
+          <a
+            class="secondary-button"
+            href="https://github.com/TitoTizzy"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <b>›_</b>
+            github/TitoTizzy
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orbit orbit-small" aria-hidden="true"></div>
+        <div class="orbit orbit-large" aria-hidden="true"></div>
+
+        <img
+          src="assets/images/otter-tech-logo.png"
+          alt="Silhouette d'une loutre devant un disque néon"
+        >
+
+        <div class="floating-card card-ai">
+          <strong>IA</strong>
+          <small>ÉVALUATION DE MODÈLES</small>
+        </div>
+
+        <div class="floating-card card-clients">
+          <strong>76</strong>
+          <small>COMPTES CLIENTS</small>
+        </div>
+      </div>
+
+      <!-- Le texte de ce terminal est généré dans script.js. -->
+      <div class="terminal">
+        <div class="terminal-header">
+          <span></span>
+          <span></span>
+          <span></span>
+          <b>myrtho@portfolio:~</b>
+        </div>
+
+        <code>
+          <i>›</i>
+          <span id="typed-command"></span>
+          <span class="cursor"></span>
+        </code>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         INDICATEURS : chiffres clés du profil
+    ====================================================== -->
+    <section class="metrics" aria-label="Chiffres clés">
+      <article>
+        <strong>3,000<span>+</span></strong>
+        <p>Employés assurés<br>gérés à l’INASSA</p>
+      </article>
+
+      <article>
+        <strong>31</strong>
+        <p>Ans<br>perspective humaine</p>
+      </article>
+
+      <article>
+        <strong>04</strong>
+        <p>Produits numériques<br>déployés en ligne</p>
+      </article>
+    </section>
+
+    <!-- Présentation plus humaine avec portrait et contexte professionnel. -->
+    <section class="human-intro">
+      <figure>
+        <img src="assets/images/myrtho-resume-photo.jpg" alt="Portrait professionnel de Bui Gerry Myrtho Charles">
+      </figure>
+      <div>
+        <p class="eyebrow">LA PERSONNE DERRIÈRE LES PRODUITS</p>
+        <h2>La technologie devient utile<br>lorsqu’elle reste <em>humaine.</em></h2>
+        <p>Chaque produit est construit avec curiosité, empathie et une compréhension claire des personnes et des organisations derrière chaque besoin.</p>
+        <a href="about.html">Découvrir l’approche <span>↗</span></a>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         À PROPOS : positionnement professionnel
+    ====================================================== -->
+    <section class="section about-section" id="about">
+      <p class="section-number"><span>01</span> À PROPOS</p>
+
+      <div class="about-grid">
+        <h2>
+          Créer des liens entre
+          <span>les personnes, les systèmes</span>
+          et <em>la technologie intelligente.</em>
+        </h2>
+
+        <div>
+          <p>
+            Une combinaison rare de leadership d’affaires et de création concrète de produits
+            transforme des problèmes opérationnels réels en systèmes numériques fiables
+            et véritablement utilisables.
+          </p>
+
+          <p class="mode-message tech-content">
+            Perspective produit et technique actuellement active.
+          </p>
+
+          <p class="mode-message business-content">
+            Perspective affaires et direction actuellement active.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         COMPÉTENCES : technologies et outils professionnels
+    ====================================================== -->
+    <section class="section" id="stack">
+      <div class="section-heading">
+        <p class="section-number"><span>02</span> TECHNOLOGIES ET IA</p>
+
+        <div>
+          <p class="eyebrow">OUTILS DE CONFIANCE</p>
+          <h2>Une stack polyvalente.<br><em>Une vision produit cohérente.</em></h2>
+        </div>
+      </div>
+
+      <div class="skill-grid">
+        <article class="skill-card">
+          <span class="skill-icon">⌘</span>
+          <h3>Frontend et fondamentaux</h3>
+          <div class="tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript ES6+</span>
+            <span>Python</span>
+            <span>Vercel</span>
+          </div>
+          <b>01</b>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-icon">⌁</span>
+          <h3>Backend et données</h3>
+          <div class="tags">
+            <span>Supabase</span>
+            <span>PostgreSQL</span>
+            <span>Firebase</span>
+            <span>API REST</span>
+            <span>Auth & RLS</span>
+          </div>
+          <b>02</b>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-icon">✦</span>
+          <h3>IA et automatisation</h3>
+          <div class="tags">
+            <span>Claude API</span>
+            <span>Ingénierie de prompts</span>
+            <span>Red teaming IA</span>
+            <span>Évaluation de modèles</span>
+          </div>
+          <b>03</b>
+        </article>
+
+        <article class="skill-card">
+          <span class="skill-icon">◇</span>
+          <h3>Affaires et opérations</h3>
+          <div class="tags">
+            <span>QuickBooks Online</span>
+            <span>Excel / VBA</span>
+            <span>Gouvernance des données</span>
+            <span>Gestion de clients</span>
+          </div>
+          <b>04</b>
+        </article>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PROJETS : sélection de réalisations principales
+    ====================================================== -->
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <p class="section-number"><span>03</span> PROJETS VEDETTES</p>
+
+        <div>
+          <p class="eyebrow">RÉALISATIONS SÉLECTIONNÉES</p>
+          <h2>Des produits qui résolvent<br><em>des problèmes réels.</em></h2>
+        </div>
+      </div>
+
+      <div class="project-list">
+        <article class="project-card">
+          <div class="project-header">
+            <span>01</span>
+            <p>FINTECH / SAAS / INTÉGRATION IA</p>
+            <a href="https://platform.comptaguide.com" target="_blank" rel="noreferrer">↗</a>
+          </div>
+
+          <div class="project-content">
+            <div>
+              <h3>ComptaGuide Financials</h3>
+              <p>
+                Un écosystème financier sécurisé qui transforme des documents complexes
+                en informations d’affaires claires et exploitables.
+              </p>
+              <div class="tags">
+                <span>Vercel</span>
+                <span>Supabase</span>
+                <span>PostgreSQL</span>
+                <span>Claude API</span>
+                <span>Cloudflare</span>
+              </div>
+            </div>
+
+            <div class="project-dashboard" aria-hidden="true">
+              <div class="dashboard-window">
+                <div class="dashboard-bar"><i></i><i></i><i></i></div>
+                <div class="dashboard-body">
+                  <aside></aside>
+                  <div><span></span><strong></strong><i></i><i></i><i></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-stats">
+            <div><strong>13</strong><span>Tables de données</span></div>
+            <div><strong>RLS</strong><span>Sécurité intégrée</span></div>
+            <div><strong>OCR</strong><span>Analyse documentaire par IA</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <span>02</span>
+            <p>PLATEFORME INSTITUTIONNELLE</p>
+            <a href="https://www.ouhhaiti.org" target="_blank" rel="noreferrer">↗</a>
+          </div>
+
+          <div class="project-content compact-project">
+            <div>
+              <h3>OUH Haiti</h3>
+              <p>
+                Un site institutionnel détaillé qui relie la santé, l’éducation,
+                l’action humanitaire, les publications, les événements et les dons.
+              </p>
+              <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Supabase</span>
+                <span>Vercel</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         EXPÉRIENCE : parcours professionnel sous forme de ligne du temps
+    ====================================================== -->
+    <section class="section" id="experience">
+      <div class="section-heading">
+        <p class="section-number"><span>04</span> EXPÉRIENCE</p>
+
+        <div>
+          <p class="eyebrow">PARCOURS PROFESSIONNEL</p>
+          <h2>Construit par <em>la pratique.</em></h2>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <article>
+          <span class="timeline-number">1</span>
+          <p>Présent</p>
+          <div><h3>INASSA</h3><h4>Gestionnaire de comptes clients</h4></div>
+          <p>Gestion de 76 comptes corporatifs représentant plus de 3 000 employés assurés.</p>
+        </article>
+
+        <article>
+          <span class="timeline-number">2</span>
+          <p>Pratique en IA</p>
+          <div><h3>Outlier.ai · Appen</h3><h4>Formateur et évaluateur IA</h4></div>
+          <p>Évaluation éthique, red teaming et ingénierie de prompts pour des systèmes d’IA générative.</p>
+        </article>
+
+        <article>
+          <span class="timeline-number">3</span>
+          <p>Opérations</p>
+          <div><h3>Shelters and Buildings Construction S.A.</h3><h4>Assistant de direction</h4></div>
+          <p>Optimisation opérationnelle, coordination de direction et conception de procédures.</p>
+        </article>
+
+        <article>
+          <span class="timeline-number">4</span>
+          <p>Stage</p>
+          <div><h3>BookSmart</h3><h4>Stagiaire en tenue de livres</h4></div>
+          <p>Soutien à la tenue des registres comptables, à la vérification des transactions et à l’organisation des documents financiers.</p>
+        </article>
+
+        <article>
+          <span class="timeline-number">5</span>
+          <p>2018</p>
+          <div><h3>Début de carrière</h3><h4>Agent de saisie</h4></div>
+          <p>Myrtho Charles a commencé son parcours professionnel par la saisie, la vérification, l’organisation et l’exactitude des données.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         FORMATION : diplômes et certifications
+    ====================================================== -->
+    <section class="section education-section">
+      <p class="section-number"><span>05</span> FORMATION ET CERTIFICATIONS</p>
+
+      <div class="education-grid">
+        <article><span>DIPLÔME</span><h3>Licence en administration des affaires</h3><p>Brigham Young University–Idaho</p></article>
+        <article><span>CERTIFICATS</span><h3>Conception web et Python</h3><p>Brigham Young University–Idaho</p></article>
+        <article><span>ATTESTATIONS</span><h3>Prompting et tenue de livres</h3><p>Google · Intuit QuickBooks Online</p></article>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         CONTACT : appel final à la collaboration
+    ====================================================== -->
+    <section class="contact-section" id="contact">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <p class="eyebrow">UN DÉFI À RÉSOUDRE ?</p>
+      <h2>Une solution intelligente<br><em>née de la collaboration.</em></h2>
+      <p>
+        Conseil en IA, produits web ou systèmes opérationnels : les idées peuvent devenir
+        des solutions fonctionnelles et fiables.
+      </p>
+
+      <div class="button-group">
+        <a class="primary-button" href="contact.html">
+          Ouvrir la page de contact
+          <span>↗</span>
+        </a>
+        <a
+          class="secondary-button"
+          href="https://www.linkedin.com/in/bui-gerry-myrtho-charles-59a916179"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn ↗
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================
+       PIED DE PAGE : identité et copyright automatique
+  ====================================================== -->
+  <footer class="site-footer">
+    <a class="brand" href="#home">
+      <img src="assets/images/otter-tech-logo.png" alt="">
+      <span>MYRTHO CHARLES<span class="accent">.</span></span>
+    </a>
+    <p>IA × FRONTEND × AFFAIRES</p>
+    <p>© <span id="current-year"></span> Bui Gerry Myrtho Charles</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
