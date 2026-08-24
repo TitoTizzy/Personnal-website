@@ -39,8 +39,12 @@
           <a href="https://github.com/TitoTizzy" target="_blank" rel="noreferrer"><span>GITHUB</span><strong>github.com/TitoTizzy</strong><i>↗</i></a>
         </div>
 
-        <!-- Formulaire statique : JavaScript prépare un courriel complet. -->
-        <form class="contact-form" id="contact-form">
+        <!-- FormSubmit transmet directement les demandes à la boîte professionnelle. -->
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/myrthocharles95@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande depuis le portfolio">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" id="contact-redirect" value="">
+          <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form-heading">
             <span>MESSAGE DIRECT</span>
             <p>Quelques informations suffisent pour préparer la conversation.</p>
@@ -77,7 +81,7 @@
 
           <div class="form-footer">
             <p class="form-status" id="form-status" aria-live="polite"></p>
-            <button class="form-submit" type="submit">Préparer le courriel <span>↗</span></button>
+            <button class="form-submit" type="submit">Envoyer le message <span>↗</span></button>
           </div>
         </form>
       </div>

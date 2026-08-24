@@ -16,6 +16,7 @@ const yearElement = document.querySelector("#current-year");
 const languageSelector = document.querySelector("#language-selector");
 const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
+const contactRedirect = document.querySelector("#contact-redirect");
 
 /* ==========================================================
    2. MODE TECH / BUSINESS
@@ -293,34 +294,11 @@ window.initializeGoogleTranslate = initializeGoogleTranslate;
 
 /* ==========================================================
    7. FORMULAIRE DE CONTACT
-   Prépare un courriel avec les informations validées.
+   Prépare l'envoi direct et la page de confirmation locale.
 ========================================================== */
-function prepareContactEmail(event) {
-  event.preventDefault();
-
-  const formData = new FormData(contactForm);
-  const senderName = formData.get("name").trim();
-  const senderEmail = formData.get("email").trim();
-  const projectType = formData.get("projectType").trim();
-  const message = formData.get("message").trim();
-  const emailSubject = `Proposition de collaboration — ${projectType}`;
-  const emailBody = [
-    `Nom : ${senderName}`,
-    `Courriel : ${senderEmail}`,
-    `Type de projet : ${projectType}`,
-    "",
-    message
-  ].join("\n");
-  const mailtoLink =
-    `mailto:myrthocharles95@gmail.com?subject=${encodeURIComponent(emailSubject)}` +
-    `&body=${encodeURIComponent(emailBody)}`;
-
-  formStatus.textContent =
-    "Le message est prêt. L’application de courriel va s’ouvrir.";
-
-  window.setTimeout(function openPreparedEmail() {
-    window.location.href = mailtoLink;
-  }, 350);
+function prepareContactSubmission() {
+  contactRedirect.value = new URL("merci.html", window.location.href).href;
+  formStatus.textContent = "Envoi sécurisé du message en cours…";
 }
 
 /* ==========================================================
@@ -438,7 +416,7 @@ function initializeWebsite() {
   document.addEventListener("mouseover", preventGoogleHoverHighlight, true);
 
   if (contactForm) {
-    contactForm.addEventListener("submit", prepareContactEmail);
+    contactForm.addEventListener("submit", prepareContactSubmission);
   }
 
   restoreLanguagePreference();

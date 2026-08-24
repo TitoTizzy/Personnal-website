@@ -96,6 +96,58 @@ button {
   font: inherit;
 }
 
+.form-honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.confirmation-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 32px 5vw;
+}
+
+.confirmation-card {
+  width: min(760px, 100%);
+  padding: clamp(38px, 8vw, 82px);
+  border: 1px solid var(--color-border);
+  background: rgba(25, 23, 26, 0.84);
+  text-align: center;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+}
+
+.confirmation-card > img {
+  width: 110px;
+  margin-bottom: 28px;
+  border-radius: 50%;
+}
+
+.confirmation-card h1 {
+  margin: 22px 0;
+  font-size: clamp(46px, 8vw, 82px);
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+}
+
+.confirmation-card h1 em {
+  background: var(--gradient-accent);
+  background-clip: text;
+  color: transparent;
+  font-style: normal;
+}
+
+.confirmation-card > p:not(.eyebrow) {
+  max-width: 560px;
+  margin: 0 auto 34px;
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
 .business-content {
   display: none;
 }
