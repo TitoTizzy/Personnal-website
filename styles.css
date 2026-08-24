@@ -39,6 +39,24 @@ body {
     var(--color-background);
   color: var(--color-text);
   font-family: var(--font-body);
+  transition: background 500ms ease, color 300ms ease;
+}
+
+/* Le mode affaires adopte une palette chaude, élégante et distincte. */
+.business-mode {
+  --color-violet: #d7a448;
+  --color-cyan: #f59e62;
+  --color-coral: #f6bd73;
+  --color-forest: #49351e;
+  --color-forest-deep: #21170e;
+  --color-emerald: #e4b85d;
+  --color-mint: #ffe0a3;
+  --gradient-accent: linear-gradient(135deg, #fff0bd, #e4b85d 48%, #f17f5d);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(113, 78, 29, 0.42), transparent 36%),
+    radial-gradient(circle at 88% 12%, rgba(241, 127, 93, 0.13), transparent 27%),
+    radial-gradient(circle at 12% 46%, rgba(228, 184, 93, 0.09), transparent 30%),
+    #100e0c;
 }
 
 /* Présente la structure du site sous un flou pendant la traduction. */
@@ -88,6 +106,57 @@ button {
 
 .business-mode .tech-content {
   display: none;
+}
+
+.mode-content {
+  animation: mode-content-in 420ms ease both;
+}
+
+.business-mode .accent {
+  color: var(--color-gold);
+}
+
+.business-mode .hero h1 span,
+.business-mode h1 em,
+.business-mode h2 em {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.business-mode .primary-button {
+  background: linear-gradient(135deg, #fff3cb, #e3b24f);
+  color: #21170e;
+  box-shadow: 0 12px 35px rgba(228, 184, 93, 0.18);
+}
+
+.business-mode .hero-visual > img {
+  filter: sepia(0.28) hue-rotate(345deg) saturate(1.15)
+    drop-shadow(0 0 42px rgba(228, 184, 93, 0.24));
+}
+
+.business-mode .orbit {
+  border-color: rgba(228, 184, 93, 0.25);
+}
+
+.business-mode .floating-card,
+.business-mode .terminal,
+.business-mode .skill-card,
+.business-mode .project-card {
+  border-color: rgba(228, 184, 93, 0.22);
+}
+
+@keyframes mode-content-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .page-noise {
@@ -1174,11 +1243,21 @@ body {
   font-style: normal;
 }
 
-.inner-hero > p:last-of-type {
+.inner-hero > p:last-of-type,
+.inner-hero > .mode-content > p:last-of-type {
   max-width: 680px;
   color: var(--color-muted);
   font-size: 17px;
   line-height: 1.75;
+}
+
+.business-mode .inner-hero::after {
+  background: rgba(228, 184, 93, 0.18);
+}
+
+.business-mode .mode-toggle i {
+  border-color: rgba(228, 184, 93, 0.55);
+  box-shadow: 0 0 16px rgba(228, 184, 93, 0.2);
 }
 
 .profile-section {

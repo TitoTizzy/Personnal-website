@@ -27,17 +27,19 @@ function toggleProfileMode() {
   page.classList.toggle("tech-mode", !businessModeIsActive);
   techLabel.classList.toggle("active", !businessModeIsActive);
   businessLabel.classList.toggle("active", businessModeIsActive);
-  sessionStorage.setItem("portfolio-mode", businessModeIsActive ? "business" : "tech");
+  modeButton.setAttribute("aria-pressed", String(businessModeIsActive));
+  localStorage.setItem("portfolio-mode", businessModeIsActive ? "business" : "tech");
 }
 
 function restoreProfileMode() {
-  const savedMode = sessionStorage.getItem("portfolio-mode");
+  const savedMode = localStorage.getItem("portfolio-mode");
   const businessModeWasSelected = savedMode === "business";
 
   page.classList.toggle("business-mode", businessModeWasSelected);
   page.classList.toggle("tech-mode", !businessModeWasSelected);
   techLabel.classList.toggle("active", !businessModeWasSelected);
   businessLabel.classList.toggle("active", businessModeWasSelected);
+  modeButton.setAttribute("aria-pressed", String(businessModeWasSelected));
 }
 
 /* ==========================================================
