@@ -18,6 +18,22 @@ const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
 const contactRedirect = document.querySelector("#contact-redirect");
 
+function readStoredValue(key) {
+  try {
+    return localStorage.getItem(key);
+  } catch (error) {
+    return null;
+  }
+}
+
+function writeStoredValue(key, value) {
+  try {
+    localStorage.setItem(key, value);
+  } catch (error) {
+    return;
+  }
+}
+
 /* ==========================================================
    2. MODE TECH / BUSINESS
    Change le message principal selon le profil choisi.
@@ -29,11 +45,11 @@ function toggleProfileMode() {
   techLabel.classList.toggle("active", !businessModeIsActive);
   businessLabel.classList.toggle("active", businessModeIsActive);
   modeButton.setAttribute("aria-pressed", String(businessModeIsActive));
-  localStorage.setItem("portfolio-mode", businessModeIsActive ? "business" : "tech");
+  writeStoredValue("portfolio-mode", businessModeIsActive ? "business" : "tech");
 }
 
 function restoreProfileMode() {
-  const savedMode = localStorage.getItem("portfolio-mode");
+  const savedMode = readStoredValue("portfolio-mode");
   const businessModeWasSelected = savedMode === "business";
 
   page.classList.toggle("business-mode", businessModeWasSelected);
@@ -106,34 +122,18 @@ const supportedLanguages = ["en", "es", "fr", "ht"];
 const languagePreferenceKey = "portfolio-language";
 let requestedLanguage = "fr";
 
-function normalizeLanguage(languageCode) {
-  const primaryLanguage = languageCode.toLowerCase().split("-")[0];
-
-  if (supportedLanguages.includes(primaryLanguage)) {
-    return primaryLanguage;
-  }
-
-  return "en";
-}
-
-function detectBrowserLanguage() {
-  const browserLanguage = navigator.language || "en";
-
-  return normalizeLanguage(browserLanguage);
-}
-
 function getPreferredLanguage() {
-  const savedLanguage = localStorage.getItem(languagePreferenceKey);
+  const savedLanguage = readStoredValue(languagePreferenceKey);
 
   if (savedLanguage && supportedLanguages.includes(savedLanguage)) {
     return savedLanguage;
   }
 
-  return detectBrowserLanguage();
+  return "fr";
 }
 
 function saveLanguagePreference(language) {
-  localStorage.setItem(languagePreferenceKey, language);
+  writeStoredValue(languagePreferenceKey, language);
 }
 
 function clearSavedGoogleTranslation() {
@@ -297,6 +297,10 @@ window.initializeGoogleTranslate = initializeGoogleTranslate;
    Prépare l'envoi direct et la page de confirmation locale.
 ========================================================== */
 function prepareContactSubmission() {
+  if (!contactRedirect || !formStatus) {
+    return;
+  }
+
   contactRedirect.value = new URL("merci.html", window.location.href).href;
   formStatus.textContent = "Envoi sécurisé du message en cours…";
 }

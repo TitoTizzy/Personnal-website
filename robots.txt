@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://titotizzy.github.io/Personnal-website/sitemap.xml

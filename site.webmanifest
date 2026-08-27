@@ -1,0 +1,21 @@
+{
+  "name": "Myrtho Charles Portfolio",
+  "short_name": "Myrtho Charles",
+  "description": "Portfolio de Myrtho Charles, Prompt Engineer, developpeur frontend et gestionnaire de comptes.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0d0d11",
+  "theme_color": "#0d0d11",
+  "icons": [
+    {
+      "src": "assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

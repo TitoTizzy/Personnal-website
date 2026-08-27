@@ -59,16 +59,13 @@ body {
     #100e0c;
 }
 
-/* Présente la structure du site sous un flou pendant la traduction. */
+/* Garde la page utilisable pendant le chargement éventuel de Google Traduction. */
 html.translation-pending {
   background: #0d0d11;
 }
 
 html.translation-pending body {
-  filter: blur(8px);
-  opacity: 0.42;
-  pointer-events: none;
-  user-select: none;
+  cursor: progress;
 }
 
 html.translation-pending::after {
@@ -81,7 +78,7 @@ html.translation-pending::after {
   height: 72px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 50%;
-  background: rgba(13, 13, 17, 0.8) url("assets/images/otter-tech-logo.png") center / 52px no-repeat;
+  background: rgba(13, 13, 17, 0.8) url("assets/images/otter-tech-logo.webp") center / 52px no-repeat;
   box-shadow: 0 0 38px rgba(99, 102, 241, 0.35);
   transform: translate(-50%, -50%);
 }
@@ -94,6 +91,15 @@ a {
 button {
   color: inherit;
   font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(45, 212, 168, 0.85);
+  outline-offset: 4px;
 }
 
 .form-honeypot {
@@ -148,16 +154,19 @@ button {
   line-height: 1.75;
 }
 
-.business-content {
-  display: none;
-}
-
-.business-mode .business-content {
-  display: block;
-}
-
+.tech-mode .business-content,
 .business-mode .tech-content {
-  display: none;
+  display: none !important;
+}
+
+.business-mode .business-content,
+.tech-mode .tech-content {
+  display: revert;
+}
+
+.business-mode .availability-badge.business-content,
+.tech-mode .availability-badge.tech-content {
+  display: inline-flex;
 }
 
 .mode-content {
@@ -293,7 +302,6 @@ button {
 
 .language-control select {
   border: 0;
-  outline: 0;
   background: transparent;
   color: var(--color-text);
   font-family: var(--font-code);
@@ -1905,7 +1913,6 @@ body {
   width: 100%;
   border: 1px solid rgba(167, 243, 208, 0.18);
   border-radius: 12px;
-  outline: none;
   background: rgba(5, 19, 15, 0.72);
   color: var(--color-text);
   font: 500 14px var(--font-body);

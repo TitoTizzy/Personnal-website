@@ -7,15 +7,17 @@
 ========================================================== */
 (function prepareInitialLanguage() {
   const supportedLanguages = ["en", "es", "fr", "ht"];
-  const savedLanguage = localStorage.getItem("portfolio-language");
-  const browserLanguage = (navigator.language || "en").toLowerCase();
-  const normalizedBrowserLanguage = browserLanguage.split("-")[0];
-  let initialLanguage = "en";
+  let savedLanguage = null;
+  let initialLanguage = "fr";
 
-  if (savedLanguage && supportedLanguages.includes(savedLanguage)) {
+  try {
+    savedLanguage = localStorage.getItem("portfolio-language");
+  } catch (error) {
+    savedLanguage = null;
+  }
+
+  if (supportedLanguages.includes(savedLanguage)) {
     initialLanguage = savedLanguage;
-  } else if (supportedLanguages.includes(normalizedBrowserLanguage)) {
-    initialLanguage = normalizedBrowserLanguage;
   }
 
   document.documentElement.lang = initialLanguage;
