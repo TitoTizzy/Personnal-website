@@ -26,6 +26,13 @@
   box-sizing: border-box;
 }
 
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -651,6 +658,9 @@ body {
 
 .hero-visual > img {
   width: min(430px, 100%);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
   border-radius: 50%;
   filter: drop-shadow(0 0 40px rgba(6, 182, 212, 0.16));
   animation: float 6s ease-in-out infinite;
@@ -2487,11 +2497,12 @@ body {
     overflow-x: clip;
   }
 
-  img,
-  svg,
-  video {
-    max-width: 100%;
-  }
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
 
   .site-header {
     align-content: center;
